@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import { Button } from './ui/button';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from './ui/card';
+import { Card, CardContent, CardHeader, CardTitle } from './ui/card';
+import { Checkbox } from './ui/checkbox';
 import { Database, Users, Mail, Search, Phone, Zap, Target, Settings } from 'lucide-react';
 
 const Services = () => {
@@ -8,61 +9,111 @@ const Services = () => {
     {
       icon: Target,
       title: 'Targeted Contact List Building',
-      description: 'Get precision-targeted B2B contact lists tailored to your ideal customer profile with verified emails and direct dials.',
+      features: [
+        'Precision-targeted B2B contacts',
+        'Verified emails & direct dials',
+        'Custom ICP matching',
+        'Industry-specific filtering'
+      ],
       link: '/services/contact-list',
     },
     {
       icon: Users,
       title: 'LinkedIn Sales Nav Scraping',
-      description: 'Extract high-quality leads from LinkedIn Sales Navigator based on your specific criteria and industry targeting.',
+      features: [
+        'Sales Navigator extraction',
+        'Specific criteria targeting',
+        'High-quality lead data',
+        'Industry filtering'
+      ],
       link: '/services/linkedin-scraping',
     },
     {
       icon: Search,
       title: 'LinkedIn Profile Enrichment',
-      description: 'Enhance your existing contacts with comprehensive LinkedIn data including job titles, company info, and professional insights.',
+      features: [
+        'Comprehensive LinkedIn data',
+        'Job titles & company info',
+        'Professional insights',
+        'Contact enhancement'
+      ],
       link: '/services/profile-enrich',
     },
     {
       icon: Phone,
       title: 'Phone Number Enrichment',
-      description: 'Add verified phone numbers to your contact lists for multi-channel outreach and higher connection rates.',
+      features: [
+        'Verified phone numbers',
+        'Multi-channel outreach ready',
+        'Higher connection rates',
+        'Direct dial access'
+      ],
       link: '/services/phone-enrich',
     },
     {
       icon: Users,
       title: 'Dedicated Research Team',
-      description: 'Get a dedicated team of researchers to build custom lists and find hard-to-reach decision makers in your target market.',
+      features: [
+        'Custom list building',
+        'Hard-to-reach decision makers',
+        'Dedicated researchers',
+        'Target market expertise'
+      ],
       link: '/services/research-team',
     },
     {
       icon: Database,
       title: 'B2B Database Scraping',
-      description: 'Extract verified contacts from Apollo, Zoominfo, Lemlist, Lusha, and other major B2B databases with full compliance.',
+      features: [
+        'Apollo, Zoominfo access',
+        'Lemlist, Lusha extraction',
+        'Verified contacts',
+        'Full compliance guaranteed'
+      ],
       link: '/services/database-scraping',
     },
     {
       icon: Mail,
       title: 'Done-For-You Cold Email',
-      description: 'Complete cold email campaigns with setup, copywriting, and management for consistent lead generation results.',
+      features: [
+        'Complete campaign setup',
+        'Professional copywriting',
+        'Campaign management',
+        'Consistent lead generation'
+      ],
       link: '/services/email-outreach',
     },
     {
       icon: Zap,
       title: 'Done-For-You LinkedIn Outreach',
-      description: 'Professional LinkedIn outreach campaigns with personalized messages and automated follow-ups for maximum engagement.',
+      features: [
+        'Professional campaigns',
+        'Personalized messages',
+        'Automated follow-ups',
+        'Maximum engagement'
+      ],
       link: '/services/linkedin-outreach',
     },
     {
       icon: Settings,
       title: 'Email Technical Setup',
-      description: 'Complete email infrastructure setup including domain configuration, SPF/DKIM/DMARC, and warm-up for deliverability.',
+      features: [
+        'Domain configuration',
+        'SPF/DKIM/DMARC setup',
+        'Email warm-up included',
+        'Deliverability optimization'
+      ],
       link: '/services/technical-setup',
     },
     {
       icon: Zap,
       title: 'Combo Pack Setup & Marketing',
-      description: 'Comprehensive multi-channel outreach combining email, LinkedIn, and phone for maximum lead generation impact.',
+      features: [
+        'Multi-channel outreach',
+        'Email + LinkedIn + Phone',
+        'Maximum lead generation',
+        'Comprehensive strategy'
+      ],
       link: '/services/combo-pack',
     },
   ];
@@ -96,20 +147,27 @@ const Services = () => {
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
               >
-                <Card className="h-full bg-card/50 border-border hover:border-primary/50 transition-all duration-300 hover:shadow-glow group">
+                <Card className="h-full bg-card/50 border-border hover:border-primary/50 transition-all duration-300 hover:shadow-glow group relative overflow-hidden">
                   <CardHeader>
                     <div className="mb-4 p-3 bg-primary/10 rounded-lg w-fit group-hover:bg-primary/20 transition-colors">
                       <Icon className="text-primary" size={28} />
                     </div>
-                    <CardTitle className="font-orbitron text-xl md:text-2xl mb-3">{service.title}</CardTitle>
-                    <CardDescription className="text-base md:text-lg text-muted-foreground leading-relaxed">
-                      {service.description}
-                    </CardDescription>
+                    <CardTitle className="text-xl md:text-2xl mb-4 text-foreground">{service.title}</CardTitle>
+                    <div className="space-y-3">
+                      {service.features.map((feature, featureIndex) => (
+                        <div key={featureIndex} className="flex items-start gap-3">
+                          <Checkbox checked className="mt-1 pointer-events-none" />
+                          <span className="text-sm md:text-base text-muted-foreground leading-relaxed">
+                            {feature}
+                          </span>
+                        </div>
+                      ))}
+                    </div>
                   </CardHeader>
-                  <CardContent>
+                  <CardContent className="pt-0">
                     <Button
                       variant="outline"
-                      className="w-full border-primary/50 hover:bg-primary/10 text-base"
+                      className="w-full border-primary/50 hover:bg-primary/10 text-base opacity-0 group-hover:opacity-100 transition-opacity duration-300"
                       onClick={() => window.location.href = service.link}
                     >
                       Learn More
