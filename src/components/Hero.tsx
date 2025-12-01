@@ -23,7 +23,7 @@ const Hero = () => {
             </span>
           </motion.div>
 
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-orbitron font-bold mb-6 leading-tight">
+          <h1 className="text-5xl md:text-6xl lg:text-7xl font-orbitron font-bold mb-6 leading-tight">
             <span className="bg-gradient-primary bg-clip-text text-transparent">
               Transform Your B2B Outreach
             </span>
@@ -31,7 +31,7 @@ const Hero = () => {
             <span className="text-foreground">With Verified Contact Lists</span>
           </h1>
 
-          <p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
+          <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-2xl mx-auto leading-relaxed">
             Get highly targeted, verified B2B contact lists and done-for-you cold outreach campaigns that deliver real results. Scale your business with precision-targeted leads.
           </p>
 
@@ -53,18 +53,18 @@ const Hero = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.6 }}
-            className="flex flex-wrap justify-center gap-6 text-sm text-muted-foreground"
+            className="flex flex-wrap justify-center gap-6 text-base md:text-lg text-muted-foreground"
           >
             <div className="flex items-center gap-2">
-              <CheckCircle size={16} className="text-primary" />
+              <CheckCircle size={20} className="text-primary" />
               <span>99% Verified Contacts</span>
             </div>
             <div className="flex items-center gap-2">
-              <CheckCircle size={16} className="text-primary" />
+              <CheckCircle size={20} className="text-primary" />
               <span>Custom Targeting</span>
             </div>
             <div className="flex items-center gap-2">
-              <CheckCircle size={16} className="text-primary" />
+              <CheckCircle size={20} className="text-primary" />
               <span>Done-For-You Setup</span>
             </div>
           </motion.div>

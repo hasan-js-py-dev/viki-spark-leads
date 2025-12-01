@@ -99,17 +99,17 @@ const Services = () => {
                 <Card className="h-full bg-card/50 border-border hover:border-primary/50 transition-all duration-300 hover:shadow-glow group">
                   <CardHeader>
                     <div className="mb-4 p-3 bg-primary/10 rounded-lg w-fit group-hover:bg-primary/20 transition-colors">
-                      <Icon className="text-primary" size={24} />
+                      <Icon className="text-primary" size={28} />
                     </div>
-                    <CardTitle className="font-orbitron text-xl mb-2">{service.title}</CardTitle>
-                    <CardDescription className="text-muted-foreground">
+                    <CardTitle className="font-orbitron text-xl md:text-2xl mb-3">{service.title}</CardTitle>
+                    <CardDescription className="text-base md:text-lg text-muted-foreground leading-relaxed">
                       {service.description}
                     </CardDescription>
                   </CardHeader>
                   <CardContent>
                     <Button
                       variant="outline"
-                      className="w-full border-primary/50 hover:bg-primary/10"
+                      className="w-full border-primary/50 hover:bg-primary/10 text-base"
                       onClick={() => window.location.href = service.link}
                     >
                       Learn More
