@@ -152,7 +152,7 @@ const Services = () => {
                     <div className="mb-4 p-3 bg-primary/10 rounded-lg w-fit group-hover:bg-primary/20 transition-colors">
                       <Icon className="text-primary" size={28} />
                     </div>
-                    <CardTitle className="text-xl md:text-2xl mb-4 text-foreground">{service.title}</CardTitle>
+                    <CardTitle className="font-jakarta font-semibold text-xl md:text-2xl mb-4 text-foreground tracking-tight">{service.title}</CardTitle>
                     <div className="space-y-3">
                       {service.features.map((feature, featureIndex) => (
                         <div key={featureIndex} className="flex items-start gap-3">

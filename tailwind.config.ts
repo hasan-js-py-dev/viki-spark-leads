@@ -51,6 +51,7 @@ export default {
       fontFamily: {
         orbitron: ['Orbitron', 'sans-serif'],
         inter: ['Inter', 'sans-serif'],
+        jakarta: ['Plus Jakarta Sans', 'sans-serif'],
       },
       backgroundImage: {
         'gradient-primary': 'var(--gradient-primary)',
