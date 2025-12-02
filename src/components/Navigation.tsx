@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { NavLink } from './NavLink';
 import { Button } from './ui/button';
 import { Menu, X } from 'lucide-react';
@@ -7,6 +8,7 @@ import logo from '@/assets/vikileads-logo.png';
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -18,8 +20,7 @@ const Navigation = () => {
 
   const navLinks = [
     { to: '/', label: 'Home' },
-    { to: '/services', label: 'Services' },
-    { to: '/about', label: 'About' },
+    { to: '/#services', label: 'Services' },
     { to: '/contact', label: 'Contact' },
   ];
 
@@ -50,7 +51,10 @@ const Navigation = () => {
                 {link.label}
               </NavLink>
             ))}
-            <Button className="bg-gradient-primary hover:shadow-glow-strong transition-all duration-300">
+            <Button 
+              className="bg-gradient-primary hover:shadow-glow-strong transition-all duration-300"
+              onClick={() => navigate('/contact')}
+            >
               Get Started
             </Button>
           </div>
@@ -79,7 +83,13 @@ const Navigation = () => {
                 {link.label}
               </NavLink>
             ))}
-            <Button className="w-full bg-gradient-primary hover:shadow-glow-strong transition-all duration-300">
+            <Button 
+              className="w-full bg-gradient-primary hover:shadow-glow-strong transition-all duration-300"
+              onClick={() => {
+                navigate('/contact');
+                setIsMobileMenuOpen(false);
+              }}
+            >
               Get Started
             </Button>
           </div>
