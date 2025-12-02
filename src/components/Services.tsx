@@ -116,6 +116,17 @@ const Services = () => {
       ],
       link: '/services/combo-pack',
     },
+    {
+      icon: Zap,
+      title: 'Custom AI Agent',
+      features: [
+        'Tailored AI solutions',
+        'Automated lead qualification',
+        'Smart conversation flows',
+        '24/7 engagement capability'
+      ],
+      link: '/services/ai-agent',
+    },
   ];
 
   return (
