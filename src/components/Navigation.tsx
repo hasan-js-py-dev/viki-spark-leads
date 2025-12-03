@@ -120,15 +120,6 @@ const Navigation = () => {
             </div>
 
             <a
-              href="/about"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-muted-foreground hover:text-foreground transition-colors"
-            >
-              About
-            </a>
-
-            <a
               href="/blog"
               target="_blank"
               rel="noopener noreferrer"
@@ -214,15 +205,6 @@ const Navigation = () => {
             </div>
 
             <div className="flex flex-wrap gap-4">
-              <a
-                href="/about"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-sm text-muted-foreground hover:text-foreground"
-                onClick={() => setIsMobileMenuOpen(false)}
-              >
-                About
-              </a>
               <a
                 href="/blog"
                 target="_blank"
