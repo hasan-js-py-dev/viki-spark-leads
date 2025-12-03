@@ -1,20 +1,33 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { MessageCircle, Mail, X } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 const FloatingContactBar = () => {
   const [showNotification, setShowNotification] = useState(false);
+  const audioRef = useRef<HTMLAudioElement | null>(null);
+
+  // Play notification sound
+  const playNotificationSound = () => {
+    if (audioRef.current) {
+      audioRef.current.volume = 0.5;
+      audioRef.current.play().catch(err => console.log('Audio play prevented:', err));
+    }
+  };
 
   useEffect(() => {
+    // Create audio element for notification sound
+    audioRef.current = new Audio('data:audio/wav;base64,UklGRnoGAABXQVZFZm10IBAAAAABAAEAQB8AAEAfAAABAAgAZGF0YQoGAACBhYqFbF1fdJivrJBhNjVgodDbq2EcBj+a2teleQcpntjemXggMqDV3Z6BKyqexdaQdTk6m73GgG1DQ5uxuHRmTUySpqptYlNPjpqaYWBUTYeOkFtgVkx8gIVXXVdMcHZ8UlpYTGZsdE9XWUtdZmxNVVhJWGNpS1NYSFZhZ0tTV0hVYGZKU1dIVWBmSlNXSFVgZkpTV0hVYGZKU1dIVWBmSlNXSFVgZkpTV0hVYGZKU1dIVWBmSlNXSFVgZkpTV0hVYGZKU1dIVWBmSlNXSFVgZkpTV0hVYGZKU1dIVWBmSlNXSFVgZkpTV0hVYGZKU1dIVWBmSlNXSFVgZkpTV0hVYGZKU1dIVWBm');
+
     // Show notification after 2 seconds
     const timer = setTimeout(() => {
       setShowNotification(true);
+      playNotificationSound();
     }, 2000);
 
-    // Auto-hide notification after 8 seconds
+    // Auto-hide notification after 10 seconds
     const hideTimer = setTimeout(() => {
       setShowNotification(false);
-    }, 10000);
+    }, 12000);
 
     return () => {
       clearTimeout(timer);
