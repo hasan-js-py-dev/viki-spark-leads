@@ -7,10 +7,10 @@ const Footer = () => {
 
   const footerLinks = {
     Services: [
-      { label: 'Contact List Building', to: '/services/contact-list' },
-      { label: 'LinkedIn Scraping', to: '/services/linkedin-scraping' },
-      { label: 'Email Outreach', to: '/services/email-outreach' },
-      { label: 'Database Scraping', to: '/services/database-scraping' },
+      { label: 'Lead Generation', to: '/services/lead-generation' },
+      { label: 'Data Enrichment', to: '/services/data-enrichment' },
+      { label: 'Platform Scraping', to: '/services/platform-scraping' },
+      { label: 'Outreach Solutions', to: '/services/outreach-solutions' },
     ],
     Company: [
       { label: 'About Us', to: '/about' },
