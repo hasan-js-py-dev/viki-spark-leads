@@ -7,7 +7,7 @@ const testimonials = [
     name: 'Michael Chen',
     role: 'VP of Sales',
     company: 'TechScale Solutions',
-    image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop&crop=face',
+    image: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?w=100&h=100&fit=crop&crop=face',
     content: 'VikiLeads transformed our outbound strategy. We saw a 340% increase in qualified meetings within the first quarter. The data accuracy is unmatched.',
     rating: 5
   },
@@ -15,7 +15,7 @@ const testimonials = [
     name: 'Sarah Martinez',
     role: 'Director of Marketing',
     company: 'GrowthHub Agency',
-    image: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&h=100&fit=crop&crop=face',
+    image: 'https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=100&h=100&fit=crop&crop=face',
     content: 'We tried ZoomInfo and Apollo before, but VikiLeads delivers higher quality contacts at a fraction of the cost. Our email deliverability improved by 45%.',
     rating: 5
   },
@@ -23,7 +23,7 @@ const testimonials = [
     name: 'David Thompson',
     role: 'Founder & CEO',
     company: 'RecruitPro Staffing',
-    image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop&crop=face',
+    image: 'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=100&h=100&fit=crop&crop=face',
     content: 'The HR and recruiting contacts from VikiLeads are incredibly accurate. We closed 12 new enterprise clients in our first 60 days using their data.',
     rating: 5
   },
@@ -31,7 +31,7 @@ const testimonials = [
     name: 'Jennifer Walsh',
     role: 'Business Development Manager',
     company: 'CloudFirst Technologies',
-    image: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&h=100&fit=crop&crop=face',
+    image: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?w=100&h=100&fit=crop&crop=face',
     content: 'Finally, a B2B data provider that understands quality over quantity. Every lead we received was verified and relevant to our ICP.',
     rating: 5
   },
@@ -39,7 +39,7 @@ const testimonials = [
     name: 'Robert Kim',
     role: 'Head of Growth',
     company: 'FinanceFlow Inc.',
-    image: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&h=100&fit=crop&crop=face',
+    image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop&crop=face',
     content: 'VikiLeads\' financial services contacts helped us break into a market we struggled with for years. 10x ROI in just 3 months.',
     rating: 5
   },
@@ -47,7 +47,7 @@ const testimonials = [
     name: 'Amanda Foster',
     role: 'CMO',
     company: 'HealthTech Innovations',
-    image: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&h=100&fit=crop&crop=face',
+    image: 'https://images.unsplash.com/photo-1594744803329-e58b31de8bf5?w=100&h=100&fit=crop&crop=face',
     content: 'The healthcare industry contacts were spot-on. We reached decision-makers we could never find before. Highly recommend VikiLeads.',
     rating: 5
   }

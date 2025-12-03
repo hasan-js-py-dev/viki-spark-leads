@@ -15,8 +15,8 @@ const Footer = () => {
     Company: [
       { label: 'About Us', to: '/about' },
       { label: 'Contact', to: '/contact' },
-      { label: 'Privacy Policy', to: '/privacy' },
-      { label: 'Terms of Service', to: '/terms' },
+      { label: 'Privacy Policy', to: '/privacy-policy' },
+      { label: 'Terms of Service', to: '/terms-of-service' },
     ],
     Resources: [
       { label: 'Blog', to: '/blog' },
