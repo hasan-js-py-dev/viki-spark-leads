@@ -31,16 +31,16 @@ const BlogSection = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <span className="inline-block px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-medium mb-4">
+          <span className="inline-block px-3 py-1.5 bg-primary/10 text-primary rounded-full text-sm font-medium mb-4">
             Blog & Resources
           </span>
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">
+          <h2 className="text-3xl md:text-4xl font-heading font-bold mb-4">
             B2B Lead Generation{' '}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-primary/60">
               Insights
             </span>
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+          <p className="text-base text-muted-foreground max-w-2xl mx-auto">
             Expert guides, strategies, and tips to maximize your sales prospecting results
           </p>
         </motion.div>
@@ -60,7 +60,7 @@ const BlogSection = () => {
                     className="h-48 flex items-center justify-center p-6"
                     style={{ background: blogThumbnails[blog.slug] }}
                   >
-                    <h3 className="text-white text-lg font-bold text-center leading-tight">
+                    <h3 className="text-white text-base font-heading font-semibold text-center leading-tight">
                       {blog.title.split(':')[0]}
                     </h3>
                   </div>
@@ -75,7 +75,7 @@ const BlogSection = () => {
                       </div>
                     </div>
                     
-                    <h3 className="text-lg font-bold mb-2 group-hover:text-primary transition-colors line-clamp-2">
+                    <h3 className="text-base font-heading font-semibold mb-2 group-hover:text-primary transition-colors line-clamp-2">
                       {blog.title}
                     </h3>
                     

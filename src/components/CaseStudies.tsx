@@ -23,16 +23,16 @@ const CaseStudies = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <span className="inline-block px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-medium mb-4">
+          <span className="inline-block px-3 py-1.5 bg-primary/10 text-primary rounded-full text-sm font-medium mb-4">
             Success Stories
           </span>
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">
+          <h2 className="text-3xl md:text-4xl font-heading font-bold mb-4">
             Real Results from{' '}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-primary/60">
               Real Clients
             </span>
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+          <p className="text-base text-muted-foreground max-w-2xl mx-auto">
             See how businesses across industries have transformed their sales pipeline with VikiLeads data
           </p>
         </motion.div>
@@ -57,7 +57,7 @@ const CaseStudies = () => {
                       <span className="text-sm text-muted-foreground">{study.industry}</span>
                     </div>
                     
-                    <h3 className="text-xl font-bold mb-2 group-hover:text-primary transition-colors">
+                    <h3 className="text-lg font-heading font-semibold mb-2 group-hover:text-primary transition-colors">
                       {study.company}
                     </h3>
                     
