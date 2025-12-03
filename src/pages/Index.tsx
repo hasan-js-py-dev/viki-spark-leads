@@ -12,6 +12,7 @@ import BlogSection from '@/components/BlogSection';
 import FAQSection from '@/components/FAQSection';
 import TrustSection from '@/components/TrustSection';
 import Footer from '@/components/Footer';
+import FloatingContactBar from '@/components/FloatingContactBar';
 
 const Index = () => {
   return (
@@ -32,6 +33,7 @@ const Index = () => {
         <TrustSection />
       </main>
       <Footer />
+      <FloatingContactBar />
     </div>
   );
 };
