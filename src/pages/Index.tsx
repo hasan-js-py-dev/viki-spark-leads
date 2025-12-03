@@ -1,7 +1,7 @@
 import Navigation from '@/components/Navigation';
 import StarField from '@/components/StarField';
 import Hero from '@/components/Hero';
-import Services from '@/components/Services';
+import ServiceCategories from '@/components/ServiceCategories';
 import TrustSection from '@/components/TrustSection';
 import Footer from '@/components/Footer';
 
@@ -12,7 +12,7 @@ const Index = () => {
       <Navigation />
       <main className="relative z-10">
         <Hero />
-        <Services />
+        <ServiceCategories />
         <TrustSection />
       </main>
       <Footer />

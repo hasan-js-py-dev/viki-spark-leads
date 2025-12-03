@@ -9,20 +9,7 @@ import { Textarea } from '@/components/ui/textarea';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { Mail, Phone, MapPin, Send } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
-
-const services = [
-  'Targeted Contact List Building',
-  'LinkedIn Sales Nav Scraping',
-  'LinkedIn Profile Enrichment',
-  'Phone Number Enrichment',
-  'Dedicated Research Team',
-  'B2B Database Scraping',
-  'Done-For-You Cold Email',
-  'Done-For-You LinkedIn Outreach',
-  'Email Technical Setup',
-  'Combo Pack Setup & Marketing',
-  'Custom AI Agent',
-];
+import { serviceCategories } from '@/data/serviceCategories';
 
 const Contact = () => {
   const { toast } = useToast();
@@ -111,18 +98,18 @@ const Contact = () => {
                 </div>
 
                 <div>
-                  <label className="block text-sm font-medium mb-2">Service Interested In *</label>
+                  <label className="block text-sm font-medium mb-2">Service Category *</label>
                   <Select
                     value={formData.service}
                     onValueChange={(value) => setFormData({ ...formData, service: value })}
                   >
                     <SelectTrigger>
-                      <SelectValue placeholder="Select a service" />
+                      <SelectValue placeholder="Select a service category" />
                     </SelectTrigger>
                     <SelectContent>
-                      {services.map((service) => (
-                        <SelectItem key={service} value={service}>
-                          {service}
+                      {serviceCategories.map((category) => (
+                        <SelectItem key={category.id} value={category.title}>
+                          {category.title}
                         </SelectItem>
                       ))}
                     </SelectContent>
