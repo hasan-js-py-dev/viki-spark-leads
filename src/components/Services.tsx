@@ -1,13 +1,10 @@
 import { motion } from 'framer-motion';
-import { useNavigate } from 'react-router-dom';
 import { Button } from './ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from './ui/card';
 import { Checkbox } from './ui/checkbox';
 import { servicesData } from '@/data/servicesData';
 
 const Services = () => {
-  const navigate = useNavigate();
-
   return (
     <section className="py-20 relative z-10">
       <div className="container mx-auto px-4">
@@ -54,20 +51,17 @@ const Services = () => {
                       ))}
                     </div>
                   </CardHeader>
-                  <CardContent className="pt-0 space-y-3">
-                    <Button
-                      variant="outline"
-                      className="w-full border-primary/50 hover:bg-primary/10 text-base"
-                      onClick={() => navigate(`/services/${service.slug}`)}
+                  <CardContent className="pt-0">
+                    <a
+                      href={`/services/${service.slug}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="block"
                     >
-                      Learn More
-                    </Button>
-                    <Button
-                      className="w-full text-base"
-                      onClick={() => navigate('/contact')}
-                    >
-                      Get Quote
-                    </Button>
+                      <Button className="w-full text-base">
+                        Get Quote
+                      </Button>
+                    </a>
                   </CardContent>
                 </Card>
               </motion.div>
