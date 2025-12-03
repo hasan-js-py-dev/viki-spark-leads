@@ -19,7 +19,7 @@ const ServiceCategories = () => {
           <Badge variant="outline" className="mb-4 border-primary/50 text-primary">
             50+ Data Services
           </Badge>
-          <h2 className="text-3xl md:text-5xl font-orbitron font-bold mb-4">
+          <h2 className="text-3xl md:text-5xl font-heading font-bold mb-4">
             Our <span className="bg-gradient-primary bg-clip-text text-transparent">Services</span>
           </h2>
           <p className="text-muted-foreground text-lg max-w-3xl mx-auto">
@@ -64,7 +64,7 @@ const ServiceCategories = () => {
                       <Icon className="text-white" size={28} />
                     </motion.div>
                     
-                    <h3 className="font-orbitron font-bold text-xl mb-3 text-foreground group-hover:text-primary transition-colors duration-300">
+                    <h3 className="font-heading font-bold text-xl mb-3 text-foreground group-hover:text-primary transition-colors duration-300">
                       {category.title}
                     </h3>
                     
@@ -138,13 +138,13 @@ const ServiceCategories = () => {
           className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-6"
         >
           {[
-            { value: '50+', label: 'Data Services' },
-            { value: '10+', label: 'Platform Integrations' },
+            { value: '10M+', label: 'Verified Contacts' },
+            { value: '500+', label: 'Happy Clients' },
             { value: '97%', label: 'Data Accuracy' },
-            { value: '24/7', label: 'AI Automation' },
+            { value: '50+', label: 'Data Sources' },
           ].map((stat, index) => (
             <div key={index} className="text-center p-6 bg-card/30 rounded-xl border border-border/50">
-              <div className="text-2xl md:text-3xl font-orbitron font-bold text-primary mb-1">
+              <div className="text-2xl md:text-3xl font-heading font-bold text-primary mb-1">
                 {stat.value}
               </div>
               <div className="text-sm text-muted-foreground">{stat.label}</div>
