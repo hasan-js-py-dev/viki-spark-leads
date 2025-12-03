@@ -68,10 +68,12 @@ const ServicePage = () => {
             <p className="text-lg md:text-xl text-muted-foreground leading-relaxed mb-8">
               {service.heroDescription}
             </p>
-            <Button size="lg" onClick={() => navigate('/contact')} className="gap-2">
-              Get Your Custom Quote
-              <ArrowRight size={18} />
-            </Button>
+            <a href="/contact" target="_blank" rel="noopener noreferrer">
+              <Button size="lg" className="gap-2">
+                Get Your Custom Quote
+                <ArrowRight size={18} />
+              </Button>
+            </a>
           </motion.div>
 
           {/* Benefits Section */}
@@ -146,18 +148,21 @@ const ServicePage = () => {
                 <h2 className="text-2xl md:text-3xl font-orbitron font-bold mb-4">
                   Pricing
                 </h2>
-                {service.pricing.type === 'starting' && service.pricing.startingPrice && (
-                  <p className="text-4xl md:text-5xl font-bold text-primary mb-2">
-                    Starting at {service.pricing.startingPrice}
-                  </p>
-                )}
+                <div className="flex items-center justify-center gap-2 mb-4">
+                  <span className="text-5xl md:text-6xl font-bold text-primary">
+                    {service.pricing.credits}
+                  </span>
+                  <span className="text-2xl md:text-3xl text-muted-foreground">Credits</span>
+                </div>
                 <p className="text-muted-foreground mb-8 max-w-2xl mx-auto">
                   {service.pricing.note}
                 </p>
-                <Button size="lg" onClick={() => navigate('/contact')} className="gap-2">
-                  Get Your Custom Quote
-                  <ArrowRight size={18} />
-                </Button>
+                <a href="/contact" target="_blank" rel="noopener noreferrer">
+                  <Button size="lg" className="gap-2">
+                    Get Your Custom Quote
+                    <ArrowRight size={18} />
+                  </Button>
+                </a>
               </CardContent>
             </Card>
           </motion.section>
@@ -199,10 +204,12 @@ const ServicePage = () => {
             <p className="text-muted-foreground mb-8 max-w-xl mx-auto">
               Contact us today for a custom quote tailored to your specific needs. Our team responds within 24 hours.
             </p>
-            <Button size="lg" onClick={() => navigate('/contact')} className="gap-2">
-              Contact Us Now
-              <ArrowRight size={18} />
-            </Button>
+            <a href="/contact" target="_blank" rel="noopener noreferrer">
+              <Button size="lg" className="gap-2">
+                Contact Us Now
+                <ArrowRight size={18} />
+              </Button>
+            </a>
           </motion.section>
         </div>
       </main>

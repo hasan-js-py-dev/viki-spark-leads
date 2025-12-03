@@ -11,8 +11,7 @@ export interface ServiceData {
   process: { step: number; title: string; description: string }[];
   faqs: { question: string; answer: string }[];
   pricing: {
-    type: 'quote' | 'starting';
-    startingPrice?: string;
+    credits: number;
     note: string;
   };
 }
@@ -50,8 +49,8 @@ export const servicesData: ServiceData[] = [
       { question: 'How long does delivery take?', answer: 'Most lists are delivered within 48-72 hours. Larger orders or complex requirements may take 5-7 business days.' }
     ],
     pricing: {
-      type: 'quote',
-      note: 'Pricing based on volume, targeting complexity, and data enrichment requirements. Most clients invest $500-$2,500 per list.'
+      credits: 150,
+      note: 'Per 1,000 contacts. Includes email verification and basic enrichment. Volume discounts available for larger orders.'
     }
   },
   {
@@ -86,8 +85,8 @@ export const servicesData: ServiceData[] = [
       { question: 'What\'s the maximum number of contacts?', answer: 'We can extract up to 2,500 contacts per Sales Navigator search. Larger needs can be handled with multiple searches.' }
     ],
     pricing: {
-      type: 'quote',
-      note: 'Pricing depends on volume and enrichment level. Typical projects range from $300-$1,500.'
+      credits: 120,
+      note: 'Per 1,000 profiles extracted. Includes email enrichment. Sales Navigator subscription required.'
     }
   },
   {
@@ -122,8 +121,8 @@ export const servicesData: ServiceData[] = [
       { question: 'Can you enrich with email too?', answer: 'Yes! We can add verified business emails to your enriched profiles for an additional fee.' }
     ],
     pricing: {
-      type: 'quote',
-      note: 'Volume-based pricing starting from $0.15 per enriched record. Bulk discounts available.'
+      credits: 80,
+      note: 'Per 1,000 records enriched. Match rate of 85%+ guaranteed. Includes full LinkedIn profile data.'
     }
   },
   {
@@ -158,8 +157,8 @@ export const servicesData: ServiceData[] = [
       { question: 'Do you check DNC lists?', answer: 'Yes, all numbers are checked against the National Do Not Call Registry and relevant state lists.' }
     ],
     pricing: {
-      type: 'quote',
-      note: 'Pay only for numbers found. Typical cost is $0.25-$0.50 per verified phone number.'
+      credits: 100,
+      note: 'Per 1,000 contacts processed. Pay only for verified numbers found. DNC checking included.'
     }
   },
   {
@@ -194,8 +193,8 @@ export const servicesData: ServiceData[] = [
       { question: 'What\'s the minimum commitment?', answer: 'We recommend a 3-month minimum to see meaningful results. Month-to-month available after initial period.' }
     ],
     pricing: {
-      type: 'quote',
-      note: 'Monthly retainer model. Most engagements range from $2,000-$10,000/month depending on volume and complexity.'
+      credits: 500,
+      note: 'Per month per dedicated researcher. Minimum 2 researchers recommended. Includes 500 verified contacts per researcher.'
     }
   },
   {
@@ -230,8 +229,8 @@ export const servicesData: ServiceData[] = [
       { question: 'How fresh is the data?', answer: 'Data is pulled fresh for each order. We can also set up recurring pulls to keep your database updated.' }
     ],
     pricing: {
-      type: 'quote',
-      note: 'Based on volume and data sources required. Typical orders range from $400-$3,000.'
+      credits: 180,
+      note: 'Per 1,000 contacts. Access to Apollo, ZoomInfo, Lusha and 10+ premium databases. Cross-referenced data.'
     }
   },
   {
@@ -266,8 +265,8 @@ export const servicesData: ServiceData[] = [
       { question: 'Do you guarantee results?', answer: 'We guarantee deliverability and engagement metrics. Meeting guarantees are available on premium plans.' }
     ],
     pricing: {
-      type: 'quote',
-      note: 'Monthly retainer starting from $1,500/month. Performance-based pricing available for qualified clients.'
+      credits: 400,
+      note: 'Per month. Includes up to 5,000 emails sent, copywriting, and optimization. Additional volume packages available.'
     }
   },
   {
@@ -302,8 +301,8 @@ export const servicesData: ServiceData[] = [
       { question: 'Do you respond to messages?', answer: 'We can handle initial responses and hand off warm leads, or forward all responses to you immediately.' }
     ],
     pricing: {
-      type: 'quote',
-      note: 'Monthly management starting from $1,200/month. Includes all outreach, not including LinkedIn Sales Navigator subscription.'
+      credits: 350,
+      note: 'Per month. Includes profile optimization, 2,000+ connection requests, and message sequences. Sales Navigator not included.'
     }
   },
   {
@@ -338,9 +337,8 @@ export const servicesData: ServiceData[] = [
       { question: 'What sending tools do you support?', answer: 'We can configure any major tool: Instantly, Lemlist, Apollo, Smartlead, Mailshake, and more.' }
     ],
     pricing: {
-      type: 'starting',
-      startingPrice: '$500',
-      note: 'One-time setup fee. Includes 3 domains, full configuration, and 30-day warm-up. Additional domains available.'
+      credits: 200,
+      note: 'One-time setup. Includes 3 domains, full DNS configuration, SPF/DKIM/DMARC, and 30-day warm-up.'
     }
   },
   {
@@ -375,8 +373,8 @@ export const servicesData: ServiceData[] = [
       { question: 'What\'s included vs. add-on?', answer: 'Email and LinkedIn management included. Phone calling, meeting setting, and premium data are available add-ons.' }
     ],
     pricing: {
-      type: 'quote',
-      note: 'Comprehensive packages starting from $3,000/month. Custom packages available based on your needs.'
+      credits: 800,
+      note: 'Per month. Full multi-channel campaign including email, LinkedIn, and call scripts. Dedicated campaign manager.'
     }
   },
   {
@@ -411,8 +409,8 @@ export const servicesData: ServiceData[] = [
       { question: 'Can it book meetings directly?', answer: 'Yes! The AI integrates with your calendar to offer available times and confirm bookings.' }
     ],
     pricing: {
-      type: 'quote',
-      note: 'Setup fee + monthly management. Typical investment: $2,000 setup + $800-$2,000/month depending on volume and channels.'
+      credits: 600,
+      note: 'Per month after 250 credit setup fee. Includes custom AI training, CRM integration, and continuous optimization.'
     }
   }
 ];
