@@ -1,5 +1,4 @@
 import { Helmet } from 'react-helmet-async';
-import Navigation from '@/components/Navigation';
 import StarField from '@/components/StarField';
 import Footer from '@/components/Footer';
 import TeamSection from '@/components/TeamSection';
@@ -33,11 +32,10 @@ const About = () => {
       
       <div className="relative min-h-screen bg-background">
         <StarField />
-        <Navigation />
         
         <main className="relative z-10">
           {/* Hero Section */}
-          <section className="pt-32 pb-20 relative">
+          <section className="pt-20 pb-20 relative">
             <div className="container mx-auto px-4">
               <motion.div
                 initial={{ opacity: 0, y: 30 }}
