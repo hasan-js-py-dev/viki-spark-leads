@@ -1,47 +1,37 @@
 import { motion } from 'framer-motion';
-import { Linkedin, Twitter, Mail } from 'lucide-react';
 import { Card, CardContent } from './ui/card';
+import waqasPhoto from '@/assets/team/waqas-azeem.jpg';
 
 const teamMembers = [
   {
     name: 'Adam Zaki',
     role: 'Founder & CEO',
-    image: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?w=300&h=300&fit=crop&crop=face',
-    bio: 'Visionary entrepreneur with 10+ years in B2B data and lead generation. Founded VikiLeads to revolutionize how businesses connect with their ideal customers.',
-    linkedin: '#',
-    twitter: '#'
+    image: 'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=300&h=300&fit=crop&crop=face',
+    bio: 'Visionary entrepreneur with 10+ years in B2B data and lead generation. Founded VikiLeads to revolutionize how businesses connect with their ideal customers.'
   },
   {
     name: 'Waqas Azeem',
     role: 'Co-Founder & CTO',
-    image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=300&h=300&fit=crop&crop=face',
-    bio: 'Tech innovator specializing in data verification systems and automation. Built the proprietary technology that powers VikiLeads\' 97% accuracy rate.',
-    linkedin: '#',
-    twitter: '#'
+    image: waqasPhoto,
+    bio: 'Tech innovator specializing in data verification systems and automation. Built the proprietary technology that powers VikiLeads\' 97% accuracy rate.'
   },
   {
     name: 'Rebecca Thompson',
     role: 'Head of Marketing Strategy',
-    image: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=300&h=300&fit=crop&crop=face',
-    bio: 'Marketing strategist with expertise in cold email campaigns and B2B demand generation. Helps clients maximize ROI from their lead lists.',
-    linkedin: '#',
-    twitter: '#'
+    image: 'https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=300&h=300&fit=crop&crop=face',
+    bio: 'Marketing strategist with expertise in cold email campaigns and B2B demand generation. Helps clients maximize ROI from their lead lists.'
   },
   {
     name: 'Kathy Vogler',
     role: 'Director of Business Development',
-    image: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?w=300&h=300&fit=crop&crop=face',
-    bio: 'Business development expert with a proven track record of building strategic partnerships. Connects clients with tailored solutions for their growth goals.',
-    linkedin: '#',
-    twitter: '#'
+    image: 'https://images.unsplash.com/photo-1594744803329-e58b31de8bf5?w=300&h=300&fit=crop&crop=face',
+    bio: 'Business development expert with a proven track record of building strategic partnerships. Connects clients with tailored solutions for their growth goals.'
   },
   {
     name: 'Sonaina Saleem',
     role: 'Senior Campaign Manager',
-    image: 'https://images.unsplash.com/photo-1598550874175-4d0ef436c909?w=300&h=300&fit=crop&crop=face',
-    bio: 'Cold outreach specialist managing end-to-end email campaigns for enterprise clients. Expert in deliverability optimization and A/B testing strategies.',
-    linkedin: '#',
-    twitter: '#'
+    image: 'https://images.unsplash.com/photo-1580894894513-541e068a3e2b?w=300&h=300&fit=crop&crop=face',
+    bio: 'Cold outreach specialist managing end-to-end email campaigns for enterprise clients. Expert in deliverability optimization and A/B testing strategies.'
   }
 ];
 
@@ -99,22 +89,6 @@ const TeamSection = () => {
                       {member.bio}
                     </p>
                     
-                    <div className="flex items-center gap-2">
-                      <a
-                        href={member.linkedin}
-                        className="w-8 h-8 rounded-full bg-muted/50 flex items-center justify-center hover:bg-primary/20 hover:text-primary transition-colors"
-                        aria-label={`${member.name}'s LinkedIn`}
-                      >
-                        <Linkedin className="w-4 h-4" />
-                      </a>
-                      <a
-                        href={member.twitter}
-                        className="w-8 h-8 rounded-full bg-muted/50 flex items-center justify-center hover:bg-primary/20 hover:text-primary transition-colors"
-                        aria-label={`${member.name}'s Twitter`}
-                      >
-                        <Twitter className="w-4 h-4" />
-                      </a>
-                    </div>
                   </div>
                 </CardContent>
               </Card>
