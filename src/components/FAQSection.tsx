@@ -13,16 +13,16 @@ const FAQSection = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <span className="inline-block px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-medium mb-4">
+          <span className="inline-block px-3 py-1.5 bg-primary/10 text-primary rounded-full text-sm font-medium mb-4">
             FAQ
           </span>
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">
+          <h2 className="text-3xl md:text-4xl font-heading font-bold mb-4">
             Frequently Asked{' '}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-primary/60">
               Questions
             </span>
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+          <p className="text-base text-muted-foreground max-w-2xl mx-auto">
             Everything you need to know about VikiLeads B2B data services
           </p>
         </motion.div>
@@ -41,13 +41,13 @@ const FAQSection = () => {
                 value={`item-${faq.id}`}
                 className="bg-card/50 backdrop-blur-sm border border-border/50 rounded-lg px-6 data-[state=open]:border-primary/50"
               >
-                <AccordionTrigger className="text-left hover:text-primary transition-colors py-4">
+                <AccordionTrigger className="text-left hover:text-primary transition-colors py-3">
                   <div className="flex items-start gap-3">
-                    <span className="text-primary font-bold text-lg">{String(index + 1).padStart(2, '0')}</span>
-                    <span className="font-medium">{faq.question}</span>
+                    <span className="text-primary font-semibold text-sm">{String(index + 1).padStart(2, '0')}</span>
+                    <span className="font-medium text-sm md:text-base">{faq.question}</span>
                   </div>
                 </AccordionTrigger>
-                <AccordionContent className="text-muted-foreground pb-4 pl-9">
+                <AccordionContent className="text-muted-foreground text-sm pb-4 pl-9">
                   {faq.answer}
                 </AccordionContent>
               </AccordionItem>

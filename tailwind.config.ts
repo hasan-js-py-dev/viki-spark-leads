@@ -49,9 +49,9 @@ export default {
         },
       },
       fontFamily: {
-        orbitron: ['Orbitron', 'sans-serif'],
+        sans: ['DM Sans', 'sans-serif'],
+        heading: ['Outfit', 'sans-serif'],
         inter: ['Inter', 'sans-serif'],
-        jakarta: ['Plus Jakarta Sans', 'sans-serif'],
       },
       backgroundImage: {
         'gradient-primary': 'var(--gradient-primary)',
