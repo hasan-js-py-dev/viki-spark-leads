@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from 'react';
 import { MessageCircle, Mail, X } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { Tooltip, TooltipContent, TooltipTrigger } from '@/components/ui/tooltip';
 
 const FloatingContactBar = () => {
   const [showNotification, setShowNotification] = useState(false);
@@ -59,8 +60,10 @@ const FloatingContactBar = () => {
     {
       name: 'Email',
       icon: <Mail className="w-5 h-5" />,
-      href: 'mailto:info@vikileads.com',
+      href: 'mailto:contact@vikileads.com',
       color: 'bg-primary',
+      showTooltip: true,
+      tooltipText: 'contact@vikileads.com',
     },
     {
       name: 'Live Chat',
@@ -100,6 +103,20 @@ const FloatingContactBar = () => {
               >
                 {link.icon}
               </button>
+            ) : link.showTooltip ? (
+              <Tooltip>
+                <TooltipTrigger asChild>
+                  <a
+                    href={link.href}
+                    className={`${link.color} w-12 h-12 rounded-full flex items-center justify-center text-white shadow-lg hover:scale-110 transition-transform duration-200 hover:shadow-xl`}
+                  >
+                    {link.icon}
+                  </a>
+                </TooltipTrigger>
+                <TooltipContent side="left" className="bg-card border-border text-foreground">
+                  <p className="text-sm font-medium">{link.tooltipText}</p>
+                </TooltipContent>
+              </Tooltip>
             ) : (
               <a
                 href={link.href}
