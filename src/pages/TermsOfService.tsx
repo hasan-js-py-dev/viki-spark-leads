@@ -153,8 +153,8 @@ const TermsOfService = () => {
                     </p>
                     <div className="mt-4 text-muted-foreground">
                       <p><strong className="text-foreground">VikiLeads LLC</strong></p>
-                      <p>Email: legal@vikileads.com</p>
-                      <p>Website: www.vikileads.com</p>
+                      <p>Email: legal@vikileads.co</p>
+                      <p>Website: www.vikileads.co</p>
                     </div>
                   </section>
                 </div>

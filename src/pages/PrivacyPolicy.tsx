@@ -203,8 +203,8 @@ const PrivacyPolicy = () => {
                     </p>
                     <div className="mt-4 text-muted-foreground">
                       <p><strong className="text-foreground">VikiLeads LLC</strong></p>
-                      <p>Email: privacy@vikileads.com</p>
-                      <p>Website: www.vikileads.com</p>
+                      <p>Email: privacy@vikileads.co</p>
+                      <p>Website: www.vikileads.co</p>
                     </div>
                   </section>
                 </div>
