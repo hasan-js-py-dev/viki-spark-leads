@@ -1,3 +1,6 @@
+# VikiLeads Robots.txt
+# https://www.vikileads.com
+
 User-agent: Googlebot
 Allow: /
 
@@ -10,5 +13,11 @@ Allow: /
 User-agent: facebookexternalhit
 Allow: /
 
+User-agent: LinkedInBot
+Allow: /
+
 User-agent: *
 Allow: /
+
+# Sitemap
+Sitemap: https://www.vikileads.com/sitemap.xml
