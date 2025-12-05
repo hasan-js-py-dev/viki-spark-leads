@@ -138,6 +138,15 @@ const Navigation = () => {
             </a>
 
             <a
+              href="/consultation"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-muted-foreground hover:text-foreground transition-colors"
+            >
+              Book a Call
+            </a>
+
+            <a
               href="/free-leads"
               target="_blank"
               rel="noopener noreferrer"
@@ -222,6 +231,15 @@ const Navigation = () => {
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 Case Studies
+              </a>
+              <a
+                href="/consultation"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-sm text-muted-foreground hover:text-foreground"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                Book a Call
               </a>
             </div>
 
