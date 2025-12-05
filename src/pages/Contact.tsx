@@ -176,13 +176,13 @@ const Contact = () => {
               <div className="bg-card/50 p-6 rounded-xl border border-border space-y-4">
                 <h3 className="text-xl font-jakarta font-semibold">Contact Information</h3>
                 <div className="space-y-3">
-                  <a href="mailto:hello@vikileads.com" className="flex items-center gap-3 text-muted-foreground hover:text-primary transition-colors">
+                  <a href="mailto:sales@vikileads.co" className="flex items-center gap-3 text-muted-foreground hover:text-primary transition-colors">
                     <Mail size={20} />
-                    <span>hello@vikileads.com</span>
+                    <span>sales@vikileads.co</span>
                   </a>
-                  <a href="tel:+1234567890" className="flex items-center gap-3 text-muted-foreground hover:text-primary transition-colors">
+                  <a href="https://wa.me/923166431649" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 text-muted-foreground hover:text-primary transition-colors">
                     <Phone size={20} />
-                    <span>+1 (234) 567-890</span>
+                    <span>WhatsApp: +92 316 643 1649</span>
                   </a>
                   <div className="flex items-center gap-3 text-muted-foreground">
                     <MapPin size={20} />

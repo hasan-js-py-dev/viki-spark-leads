@@ -13,7 +13,7 @@ const supportOptions = [
     icon: Mail,
     title: 'Email Support',
     description: 'Send us an email and we\'ll respond within 24 hours.',
-    action: 'support@vikileads.com',
+    action: 'support@vikileads.co',
     actionType: 'email'
   },
   {
@@ -25,10 +25,10 @@ const supportOptions = [
   },
   {
     icon: Phone,
-    title: 'Phone Support',
-    description: 'Speak directly with our support team for urgent matters.',
-    action: '+1 (555) 123-4567',
-    actionType: 'phone'
+    title: 'WhatsApp Support',
+    description: 'Reach us directly on WhatsApp for quick responses.',
+    action: '+92 316 643 1649',
+    actionType: 'whatsapp'
   },
   {
     icon: Clock,
@@ -101,8 +101,8 @@ const SupportPage = () => {
                               {option.action}
                             </a>
                           )}
-                          {option.actionType === 'phone' && (
-                            <a href={`tel:${option.action.replace(/\D/g, '')}`} className="text-primary hover:underline text-sm font-medium">
+                          {option.actionType === 'whatsapp' && (
+                            <a href="https://wa.me/923166431649" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline text-sm font-medium">
                               {option.action}
                             </a>
                           )}
