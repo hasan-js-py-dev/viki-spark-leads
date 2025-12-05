@@ -1,5 +1,5 @@
 import { NavLink } from './NavLink';
-import { Linkedin, Mail } from 'lucide-react';
+import { Linkedin, Mail, Twitter } from 'lucide-react';
 import logo from '@/assets/vikileads-logo.png';
 
 const Footer = () => {
@@ -50,6 +50,15 @@ const Footer = () => {
                 aria-label="LinkedIn"
               >
                 <Linkedin size={20} />
+              </a>
+              <a
+                href="https://x.com/Viki_leads"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-muted-foreground hover:text-primary transition-colors"
+                aria-label="Twitter"
+              >
+                <Twitter size={20} />
               </a>
               <a
                 href="https://wa.me/923166431649"
