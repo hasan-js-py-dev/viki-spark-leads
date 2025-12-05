@@ -1,18 +1,28 @@
+import { lazy, Suspense } from 'react';
 import Navigation from '@/components/Navigation';
 import StarField from '@/components/StarField';
 import Hero from '@/components/Hero';
 import ClientLogos from '@/components/ClientLogos';
-import ServiceCategories from '@/components/ServiceCategories';
-import IndustriesSection from '@/components/IndustriesSection';
-import HowItWorks from '@/components/HowItWorks';
-import ComparisonSection from '@/components/ComparisonSection';
-import TestimonialsSection from '@/components/TestimonialsSection';
-import CaseStudies from '@/components/CaseStudies';
-import BlogSection from '@/components/BlogSection';
-import FAQSection from '@/components/FAQSection';
-import TrustSection from '@/components/TrustSection';
-import Footer from '@/components/Footer';
-import FloatingContactBar from '@/components/FloatingContactBar';
+
+// Lazy load below-the-fold components for better performance
+const ServiceCategories = lazy(() => import('@/components/ServiceCategories'));
+const IndustriesSection = lazy(() => import('@/components/IndustriesSection'));
+const HowItWorks = lazy(() => import('@/components/HowItWorks'));
+const ComparisonSection = lazy(() => import('@/components/ComparisonSection'));
+const TestimonialsSection = lazy(() => import('@/components/TestimonialsSection'));
+const CaseStudies = lazy(() => import('@/components/CaseStudies'));
+const BlogSection = lazy(() => import('@/components/BlogSection'));
+const FAQSection = lazy(() => import('@/components/FAQSection'));
+const TrustSection = lazy(() => import('@/components/TrustSection'));
+const Footer = lazy(() => import('@/components/Footer'));
+const FloatingContactBar = lazy(() => import('@/components/FloatingContactBar'));
+
+// Simple loading placeholder
+const SectionLoader = () => (
+  <div className="min-h-[200px] flex items-center justify-center">
+    <div className="w-8 h-8 border-2 border-primary border-t-transparent rounded-full animate-spin" />
+  </div>
+);
 
 const Index = () => {
   return (
@@ -22,18 +32,40 @@ const Index = () => {
       <main className="relative z-10">
         <Hero />
         <ClientLogos />
-        <ServiceCategories />
-        <IndustriesSection />
-        <HowItWorks />
-        <ComparisonSection />
-        <TestimonialsSection />
-        <CaseStudies />
-        <BlogSection />
-        <FAQSection />
-        <TrustSection />
+        <Suspense fallback={<SectionLoader />}>
+          <ServiceCategories />
+        </Suspense>
+        <Suspense fallback={<SectionLoader />}>
+          <IndustriesSection />
+        </Suspense>
+        <Suspense fallback={<SectionLoader />}>
+          <HowItWorks />
+        </Suspense>
+        <Suspense fallback={<SectionLoader />}>
+          <ComparisonSection />
+        </Suspense>
+        <Suspense fallback={<SectionLoader />}>
+          <TestimonialsSection />
+        </Suspense>
+        <Suspense fallback={<SectionLoader />}>
+          <CaseStudies />
+        </Suspense>
+        <Suspense fallback={<SectionLoader />}>
+          <BlogSection />
+        </Suspense>
+        <Suspense fallback={<SectionLoader />}>
+          <FAQSection />
+        </Suspense>
+        <Suspense fallback={<SectionLoader />}>
+          <TrustSection />
+        </Suspense>
       </main>
-      <Footer />
-      <FloatingContactBar />
+      <Suspense fallback={null}>
+        <Footer />
+      </Suspense>
+      <Suspense fallback={null}>
+        <FloatingContactBar />
+      </Suspense>
     </div>
   );
 };
