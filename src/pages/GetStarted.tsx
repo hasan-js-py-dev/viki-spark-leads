@@ -10,6 +10,7 @@ import { Textarea } from '@/components/ui/textarea';
 import { Card, CardContent } from '@/components/ui/card';
 import { MessageCircle, Send, Mail, ArrowRight } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
+import { supabase } from '@/integrations/supabase/client';
 
 const GetStarted = () => {
   const { toast } = useToast();
@@ -25,15 +26,35 @@ const GetStarted = () => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    await new Promise((resolve) => setTimeout(resolve, 1000));
+    try {
+      const { data, error } = await supabase.functions.invoke('send-contact-email', {
+        body: {
+          name: formData.name,
+          email: formData.email,
+          company: formData.company,
+          message: formData.message,
+          source: 'get-started',
+        },
+      });
 
-    toast({
-      title: 'Message Sent!',
-      description: "We'll get back to you within 24 hours.",
-    });
+      if (error) throw error;
 
-    setFormData({ name: '', email: '', company: '', message: '' });
-    setIsSubmitting(false);
+      toast({
+        title: 'Message Sent!',
+        description: "We'll get back to you within 24 hours.",
+      });
+
+      setFormData({ name: '', email: '', company: '', message: '' });
+    } catch (error: any) {
+      console.error('Error sending message:', error);
+      toast({
+        title: 'Error',
+        description: 'Failed to send message. Please try again or contact us directly.',
+        variant: 'destructive',
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const contactMethods = [
@@ -42,7 +63,7 @@ const GetStarted = () => {
       icon: MessageCircle,
       description: 'Chat with us instantly',
       action: 'Open WhatsApp',
-      href: 'https://wa.me/1234567890',
+      href: 'https://wa.me/923166431649',
       gradient: 'from-green-500 to-green-600',
     },
     {

@@ -11,6 +11,7 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Gift, Check, ArrowRight, Sparkles } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
+import { supabase } from '@/integrations/supabase/client';
 
 const FreeLeads = () => {
   const { toast } = useToast();
@@ -27,15 +28,36 @@ const FreeLeads = () => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    await new Promise((resolve) => setTimeout(resolve, 1000));
+    try {
+      const { data, error } = await supabase.functions.invoke('send-contact-email', {
+        body: {
+          name: formData.name,
+          email: formData.email,
+          company: formData.company,
+          industry: formData.industry,
+          message: formData.requirements,
+          source: 'free-leads',
+        },
+      });
 
-    toast({
-      title: 'Request Submitted!',
-      description: "We'll deliver your 100 free leads within 24-48 hours.",
-    });
+      if (error) throw error;
 
-    setFormData({ name: '', email: '', company: '', industry: '', requirements: '' });
-    setIsSubmitting(false);
+      toast({
+        title: 'Request Submitted!',
+        description: "We'll deliver your 100 free leads within 24-48 hours.",
+      });
+
+      setFormData({ name: '', email: '', company: '', industry: '', requirements: '' });
+    } catch (error: any) {
+      console.error('Error sending request:', error);
+      toast({
+        title: 'Error',
+        description: 'Failed to submit request. Please try again or contact us directly.',
+        variant: 'destructive',
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const features = [
