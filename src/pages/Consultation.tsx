@@ -26,7 +26,7 @@ const Consultation = () => {
         window.Cal('init', { origin: 'https://cal.com' });
         window.Cal('inline', {
           elementOrSelector: '#cal-booking',
-          calLink: 'vikileads/consultation', // Replace with your Cal.com link
+          calLink: 'vikileads',
           layout: 'month_view',
         });
       }
