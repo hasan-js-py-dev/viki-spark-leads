@@ -66,13 +66,16 @@ const TrustSection = () => {
           <p className="text-muted-foreground text-lg mb-6 max-w-2xl mx-auto">
             Get started today with verified contact lists and done-for-you campaigns that deliver measurable ROI
           </p>
-          <motion.button
+          <motion.a
+            href="https://cal.com/vikileads"
+            target="_blank"
+            rel="noopener noreferrer"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="px-8 py-4 bg-gradient-primary rounded-lg font-semibold text-base hover:shadow-glow-strong transition-all duration-300"
+            className="inline-block px-8 py-4 bg-gradient-primary rounded-lg font-semibold text-base hover:shadow-glow-strong transition-all duration-300"
           >
             Schedule a Free Consultation
-          </motion.button>
+          </motion.a>
         </motion.div>
       </div>
     </section>
