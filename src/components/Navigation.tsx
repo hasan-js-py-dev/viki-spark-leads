@@ -138,12 +138,12 @@ const Navigation = () => {
             </a>
 
             <a
-              href="/consultation"
+              href="https://cal.com/vikileads"
               target="_blank"
               rel="noopener noreferrer"
               className="text-muted-foreground hover:text-foreground transition-colors"
             >
-              Book a Call
+              Schedule a Free Consultation
             </a>
 
             <a
@@ -233,13 +233,13 @@ const Navigation = () => {
                 Case Studies
               </a>
               <a
-                href="/consultation"
+                href="https://cal.com/vikileads"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-sm text-muted-foreground hover:text-foreground"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
-                Book a Call
+                Schedule a Free Consultation
               </a>
             </div>
 
